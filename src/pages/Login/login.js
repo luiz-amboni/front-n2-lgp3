@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function fazerLogin(login, senha) {
     const instance = axios.create({
-        baseURL: 'http://localhost:3001',
+        baseURL: process.env.URL_API || 'http://localhost:3001',
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
